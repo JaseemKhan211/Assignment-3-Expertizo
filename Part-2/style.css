@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+          
+               
+                  /* Slider work */
+   body
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ .slider
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-end;
+}
+ .slider input[type="radio"]
+{
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px;
+    outline: none;
+    cursor: pointer;
+}
+ .slider .slide 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url(Images/1.jpg);
+    transition: 1s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+  .slider input[type="radio"].radio1:checked ~ .slide
+{
+   background-position-x: 0;
+}
+  .slider input[type="radio"].radio2:checked ~ .slide
+{
+   background-position-x: -780px;
+}
+  .slider input[type="radio"].radio3:checked ~ .slide
+{
+   background-position-x: -1000px;
+}
+ .text-slide
+{
+  position: absolute;
+  top: 30%;
+  left: 12%;
+  transform: transition(-50%,-50%);
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  transition: 1s;
+}
+ .text-slide h2
+{
+  margin: 0;
+  padding: 0;
+  font-size: 5em;
+  line-height: 0.8em;
+  text-shadow: 0 4px 8px rgba(0,0,0,.5);
+}
+ .text-slide p
+{
+  font-size: 20px;
+  text-shadow: 0 4px 8px rgba(0,0,0,.5);
+}
+ .slider input[type="radio"].radio1:checked ~ .text1
+{
+  opacity: 1;
+}
+  .slider input[type="radio"].radio2:checked ~ .text2
+{
+  opacity: 1;
+}
+  .slider input[type="radio"].radio3:checked ~ .text3
+{
+  opacity: 1;
+}
+                            /* end  */
+
+               
+                          /* image Gallery work */
+    .heading
+{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+}
+ .main
+{
+  position: absolute;
+  top: 103%;
+  left: 12%;
+  width: 70%;
+  height: 55%;
+  margin: 80px auto 0;
+  background: #262626;
+}
+ .main .box
+{
+  position: relative;
+  top: 12px;
+  width: 200px;
+  height: 130px;
+  background: #000;
+  float: left;
+  box-sizing: border-box;
+  margin: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,.8);
+}
+ .main .box:before
+{
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  bottom: 10px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transform: scaleX(0);
+  opacity: 0;
+}
+.main .box:hover:before
+{
+  transform: scaleX(1);
+  opacity: 1;
+}
+.main .box:after
+{
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  bottom: 10px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transform: scaleX(0);
+  opacity: 0;
+  z-index: 1;
+}
+.main .box:hover:after
+{
+  transform: scaleX(1);
+  opacity: 1;
+}
+  .main .box .imgbox
+{
+  position: relative;
+}
+  .main .box .imgbox img
+{
+   width: 100%;
+   transition: 0.5s;
+}
+  .main .box:hover .imgbox img
+{
+   opacity: .2;
+   transform: scale(1.2);
+}
+  .main .box .content
+{
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 2;
+  text-align: center;
+}
+  .main .box .content h2
+{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50px);
+}
+  .main .box:hover .content h2
+{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+  transition-delay: 0.2s;
+}
