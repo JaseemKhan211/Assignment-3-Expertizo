@@ -5,7 +5,7 @@ V ### Assignment-3 | Expertizo
  ### Built With
 - **Html5**
 - **CSS3**
-- **JavaScript
+- **JavaScript**
 
 
 
